@@ -6,6 +6,8 @@ const findSum = function(array) {
   return sum;
 };
 
-const returnString = function(str) {
-  return str;
+const removeParenth = function(str) {
+  const first = str.split('(')[0];
+  const last = str.split(')')[1];
+  return first + last;
 };
