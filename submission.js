@@ -11,3 +11,13 @@ const removeParenth = function(str) {
   const last = str.split(')')[1];
   return first + last;
 };
+
+const findFrequency = function(array) {
+  const freqMap = array.reduce((acc, i) => {
+    acc[i] = ++acc[i] || 1;
+
+    return acc;
+  }, {});
+
+  Object.keys(freqMap).forEach(function(k) {});
+};
