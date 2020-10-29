@@ -19,5 +19,28 @@ const findFrequency = function(array) {
     return acc;
   }, {});
 
-  Object.keys(freqMap).forEach(function(k) {});
+  let maxCount = 1;
+  let maxItem;
+
+  let minCount = 1;
+  let minItem;
+
+  Object.keys(freqMap).forEach(function(k) {
+    const count = freqMap[k];
+
+    if (count <= minCount) {
+      minCount = count;
+      minItem = k;
+    }
+
+    if (count >= maxCount) {
+      maxCount = count;
+      maxItem = k;
+    }
+  });
+
+  return {
+    most: maxItem,
+    least: minItem,
+  };
 };
