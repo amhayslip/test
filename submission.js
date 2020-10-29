@@ -76,3 +76,16 @@ const scoreScrabble = function(str) {
 
   return score;
 };
+
+const isPalindrome = function(str) {
+  const re = /[\W_]/g; // or var re = /[^A-Za-z0-9]/g;
+
+  const lowRegStr = str.toLowerCase().replace(re, '');
+
+  const reverseStr = lowRegStr
+    .split('')
+    .reverse()
+    .join('');
+
+  return reverseStr === lowRegStr;
+};
